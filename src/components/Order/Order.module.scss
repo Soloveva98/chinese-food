@@ -1,0 +1,143 @@
+@import "./..//..//scss/variables";
+
+.account{
+	&__order{
+		max-width: 454px;
+		margin-left: 50px;
+		overflow: hidden;
+		background-color: #fff;
+		h4{
+			color: $pink;
+			font-weight: 500;
+			font-size: 20px;
+			margin-right: 10px;
+			max-width: 110px;
+			width: 100%;
+		}
+		@media (max-width: 810px){
+			max-width: 295px;
+			margin-left: 30px;
+			h4{
+				font-size: 16px;
+				max-width: 90px;
+			}
+		}
+		@media (max-width: 510px){
+			max-width: 218px;
+			margin-left: 10px;
+			h4{
+				font-size: 14px;
+				max-width: 75px;
+			}
+		}
+	}
+}
+
+.subtitle{
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	overflow: hidden;
+	background-color: #fff;
+	img{cursor: pointer;}
+	@media (max-width: 510px){
+		margin-bottom: 12px;
+		img{width: 12px;}
+	}
+}
+
+.order{
+	position: absolute;
+	visibility: hidden;
+	transform: translateY(-150%);
+	transition: transform 0.3s ease;
+	overflow: hidden;
+	color: $grey-description;
+	&__items{
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #ECECF1;
+		img{
+			width: 30px;
+		}
+	}
+	&__title{
+		font-weight: 700;
+		font-size: 12px;
+		margin-left: 15px;
+		max-width: 335px;
+		width: 100%;
+	}
+	&__price{
+		font-weight: 700;
+		font-size: 12px;
+		color: $pink;
+		max-width: 50px;
+		width: 100%;
+	}
+	&__count{
+		font-weight: 600;
+		font-size: 10px;
+	}
+	&__total{
+		margin-top: 10px;
+		font-weight: 600;
+		font-size: 12px;
+		letter-spacing: 1px;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		span{
+			margin-left: 10px;
+			font-weight: 700;
+			font-size: 14px;
+			color: $pink;
+		}
+	}
+	&.visible{
+		position: static;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	@media (max-width: 810px){
+		&__items{img{width: 20px;}}
+		&__title{
+			font-size: 10px;
+			margin-left: 5px;
+			max-width: 210px;
+		}
+		&__price{
+			font-size: 10px;
+			max-width: 45px;
+		}
+		&__count{font-size: 8px;}
+		&__total{
+			margin-top: 7px;
+			font-size: 10px;
+			span{
+				margin-left: 8px;
+				font-size: 12px;
+			}
+		}
+	}
+	@media (max-width: 510px){
+		&__title{
+			font-size: 8px;
+			max-width: 150px;
+		}
+		&__price{
+			font-size: 8px;
+			max-width: 30px;
+		}
+		&__count{font-size: 6px;}
+		&__total{
+			margin-top: 5px;
+			font-size: 8px;
+			span{
+				margin-left: 5px;
+				font-size: 9px;
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+@import "./..//..//scss/variables";
+
+.skeleton__block{
+	display: flex;
+	justify-content: center;
+}
+
+.products{
+	margin-top: -30px;
+	padding: 0 5px;
+	&__block{
+		padding: 60px 0;
+		border-bottom: 1px solid #ECECF1;
+		h2{
+			font-weight: 700;
+			font-size: 30px;
+			color: $pink;
+			margin-bottom: 20px;
+		}
+	}
+	&__items{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-gap: 37px;
+		@media (max-width: 1153px) {
+			grid-gap: 20px;
+		}
+		@media (max-width: 1075px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 652px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 435px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+@media (max-width: 810px) {
+	.products{
+		&__block{
+			padding: 30px 0;
+			h2{font-size: 26px;}
+		}
+	}
+}
+
+@media (max-width: 638px) {
+	.products{
+		&__block{
+			h2{font-size: 24px;}
+		}
+	}
+}
+
+@media (max-width: 487px) {
+	.products{
+		margin-top: 0;
+	}
+}

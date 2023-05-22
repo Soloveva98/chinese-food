@@ -1,0 +1,95 @@
+@import "./..//..//scss/variables";
+
+.account{
+	padding: 30px 5px;
+	background-color: #fff;
+	&__info{
+		padding: 30px 0;
+		font-size: 22px;
+		display: flex;
+		align-items: center;
+		color: $grey-description;
+		p{
+			&:first-child{
+				margin-right: 50px;
+			}
+		}
+	}
+	&__orders{
+		padding-bottom: 30px;
+		h3{
+			color: $pink;
+			font-size: 26px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+		}
+	}
+	@media (max-width: 810px) {
+		&__info{
+			padding: 20px 0;
+			font-size: 18px;
+		}
+		&__orders{
+			padding-bottom: 20px;
+			h3{
+				font-size: 22px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	@media (max-width: 510px) {
+		&__info{
+			padding: 20px 0;
+			font-size: 16px;
+		}
+		&__orders{
+			padding-bottom: 10px;
+			h3{
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@media (max-width: 310px) {
+		&__info{
+			flex-direction: column;
+			align-items: start;
+			p{
+				&:first-child{
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+.orders__empty{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 280px;
+	img{width: 150px;}
+	p{
+		color: $grey-description;
+		font-size: 16px;
+		margin-top: 15px;
+	}
+	@media (max-width: 810px){
+		max-width: 220px;
+		img{width: 100px;}
+		p{
+			font-size: 12px;
+			margin-top: 10px;
+		}
+	}
+	@media (max-width: 510px){
+		max-width: 190px;
+		img{width: 70px;}
+		p{
+			font-size: 10px;
+			margin-top: 5px;
+		}
+	}
+}

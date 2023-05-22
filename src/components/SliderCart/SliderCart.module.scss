@@ -1,0 +1,67 @@
+.slider{
+	max-width: 800px;
+	margin: 0 auto;
+	&__item{
+		width: 195px;
+		height: 85px;
+		border: 1.5px solid #E2E2E9;
+		border-radius: 12px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		img{
+			width: 65px;
+			margin-right: 5px;
+		}
+	}
+	&__title{
+		font-weight: 600;
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+	&__price{
+		font-weight: 700;
+		font-size: 14px;
+		color: #FF2E65;
+		margin-right: 20px;
+	}
+	button {
+		img {
+			width: 10px;
+		}
+	}
+	@media (max-width: 855px){
+		max-width: 590px;
+		&__item{
+			width: 110px;
+			height: 65px;
+			padding: 5px;
+			img{width: 35px;}
+		}
+		&__title{
+			font-size: 10px;
+			margin-bottom: 5px;
+		}
+		&__price{
+			font-size: 10px;
+			margin-right: 10px;
+		}
+		button {
+			img {
+				width: 5px;
+			}
+		}
+	}
+	@media (max-width: 738px){
+		max-width: 450px;
+	}
+	@media (max-width: 514px){
+		max-width: 340px;
+	}
+	@media (max-width: 410px){
+		max-width: 225px;
+	}
+	@media (max-width: 307px){
+		max-width: 110px;
+	}
+}

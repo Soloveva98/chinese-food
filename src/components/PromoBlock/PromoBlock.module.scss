@@ -1,0 +1,92 @@
+@import "./..//..//scss/variables";
+
+.promotions{
+	padding: 60px 5px;
+	h2{
+		font-weight: 700;
+		font-size: 44px;
+		line-height: 54px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	span{
+		color: $pink;
+	}
+	&__items{
+		width: 1100px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 163px);
+		grid-column-gap: 4px;
+		grid-row-gap: 10px;
+		margin-bottom: 50px;
+		img{
+			width: 400px;
+			border-radius: 20px;
+			&:nth-child(1){
+				width: 670px;
+				grid-row: span 3;
+				margin-right: 20px;
+			}
+		}
+		@media (max-width: 1130px) {
+			width: 900px;
+			grid-template-rows: repeat(3, 130px);
+			img{
+				width: 330px;
+				&:nth-child(1){
+					width: 545px;
+				}
+			}
+		}
+		@media (max-width: 917px) {
+			width: 574px;
+			grid-template-rows: repeat(3, 82px);
+			img{
+				width: 200px;
+				&:nth-child(1){
+					width: 350px;
+				}
+			}
+		}
+		@media (max-width: 593px) {
+			width: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			img{
+				&:nth-child(1){
+					display: none;
+				}
+			}
+		}
+	}
+	button{
+		margin: 0 auto;
+		a{color: #fff;}
+	}
+}
+
+
+@media (max-width: 917px) {
+	.promotions{
+		padding: 25px 5px;
+		h2{
+			font-size: 34px;
+			margin-bottom: 20px;
+		}
+		&__items{
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 508px) {
+	.promotions{
+		h2{
+			font-size: 28px;
+			margin-bottom: 10px;
+		}
+	}
+}

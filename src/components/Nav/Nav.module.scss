@@ -1,0 +1,128 @@
+@import "./..//..//scss/variables";
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 5px;
+	&__menu{
+		display: flex;
+		font-weight: 600;
+		font-size: 15px;
+		li, a{
+			cursor: pointer;
+			color: #000;
+			margin-top: 1px;
+			transition: 0.2s ease-in-out;
+			&:hover{color: $pink;}
+		}
+		li{margin-right: 20px;}
+
+		@media (max-width: 1018px) {
+			width: 100%;
+			max-width: 490px;
+			overflow-x: scroll;
+			li{margin-bottom: 12px;}
+			&::-webkit-scrollbar{
+				height: 5px;
+			}
+			&::-webkit-scrollbar-thumb{
+				border-radius: 10px;
+				background-color: $pink;
+			}
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+				border-radius: 10px;
+				background-color: #f5f2ed;
+			}
+		}
+	}
+	&__cart{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		a{
+			color: #fff;
+		}
+		.login__btn{
+			margin-right: 20px;
+			font-weight: 700;
+			font-size: 16px;
+			color: $grey;
+			background-color: transparent;
+			padding: 10px 20px;
+			border-radius: 30px;
+			transition: 0.2s ease-in-out;
+			&:hover{
+				background-color: $light-grey;
+				color: #fff;
+			}
+			&:active{
+				transform: translateY(1px);
+			}
+		}
+		.login__account{
+			display: inline-block;
+			margin-right: 25px;
+			background-color: $light-grey;
+			border-radius: 8px;
+			padding: 6.8px 15px;
+			transition: 0.2s ease-in-out;
+			&:hover{
+				background-color: $pink;
+				transform: translateY(1px);
+			}
+			&:active{
+				background-color: $pink-dark;
+			}
+		}
+	}
+
+	@media (max-width: 810px) {
+		justify-content: center;
+		flex-direction: column-reverse;
+		&__menu{
+			margin-top: 20px;
+		}
+		&__cart{
+			.login__btn{
+				margin-right: 10px;
+				font-size: 14px;
+				padding: 8px 15px;
+			}
+			.login__account{
+				margin-right: 10px;
+				padding: 5px 10px;
+				img{width: 20px;}
+			}
+		}
+	}
+
+	@media (max-width: 516px){
+		padding: 0 15px;
+		&__menu{font-size: 12px;}
+		&__cart{
+			.login__btn{
+				margin-right: 10px;
+				font-size: 12px;
+				padding: 5px 10px;
+			}
+			.login__account{
+				margin-right: 10px;
+				padding: 4px 6px;
+				img{width: 15px;}
+			}
+		}
+	}
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	max-width: 1130px;
+	padding: 10px 5px;
+	background-color: #fff;
+	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
